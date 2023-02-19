@@ -1,0 +1,17 @@
+<launch>
+  <node name="cone_decoder" pkg="slam" type="cone_decoder"/>
+
+  <node name="cone_clustering" pkg="slam" type="cone_clustering"/>
+
+  <node name="cone_costmap" pkg="slam" type="cone_costmap"/>
+
+  <node name="cone_box" pkg="slam" type="cone_box_publisher_newer.py" output="screen"/>
+
+  <node name="cone_color" pkg="slam" type="cone_color" output="screen" respawn="true"/>
+
+  <node name="cone_camera_publisher" pkg="slam" type="cone_camera_publisher.py"/>
+
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+
+</launch>
+

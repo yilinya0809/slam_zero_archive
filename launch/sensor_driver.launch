@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find slam)/launch/imu_driver.launch"/>  
+  <include file="$(find slam)/launch/gps_driver.launch"/>
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+  <include file="$(find slam)/launch/decoder.launch"/>
+</launch>
+

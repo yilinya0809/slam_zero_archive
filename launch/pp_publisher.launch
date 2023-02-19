@@ -1,0 +1,8 @@
+<launch>
+  <node name="local_costmap_publisher" pkg="slam" type="local_costmap_publisher"/>
+  <node name="local_path_publisher" pkg="slam" type="local_path_publisher"/>
+  <node name="delivery_camera_publisher" pkg="slam" type="delivery_camera_publisher.py"/>
+  <node name="traffic_light_publisher" pkg="slam" type="traffic_light_publisher.py"/>
+  <node name="delivery_sign_publisher_new" pkg="slam" type="delivery_sign_publisher_new.py"/>
+  <rosparam file="$(find slam)/slam_para.yaml" />  
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+  <node name="lane_sector" pkg="slam" type="lane_sector"/>
+  <node name="lane_costmap_publisher" pkg="slam" type="lane_costmap_publisher"/>
+
+  <node name="angle_correction" pkg="slam" type="angle_correction"/>
+  <node name="angle_offset" pkg="slam" type="angle_offset.py"/>
+
+  <node name="lane_image_publisher" pkg="slam" type="lane_image_publisher"/>
+  <node name="camera_front_node" pkg="slam" type="camera_front_publisher.py"/>
+  <rosparam file="$(find slam)/slam_para.yaml" />  
+</launch>

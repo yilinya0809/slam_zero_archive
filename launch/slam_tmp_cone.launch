@@ -1,0 +1,9 @@
+<launch>
+  <node name="cone_decoder" pkg="slam" type="cone_decoder"/>
+
+  <node name="cone_clustering" pkg="slam" type="cone_clustering"/>
+
+  <node name="cone_costmap" pkg="slam" type="cone_costmap"/>
+
+</launch>
+
